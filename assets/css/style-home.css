@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear:both;
+}
+/* 
+    từ trên xuống dưới
+    từ trái sang phải
+    từ tổng quan đến chi tiết
+    css:
+    vị trí
+    kích thước
+    màu sắc
+    kiểu dáng
+*/
+#koi-farm{}
+
+#header{
+    
+    
+}
+
+#container-header{
+    position: relative;
+    height:240px;
+    background-color: #D5E8D4;
+}
+
+.farm-header{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    
+}
+
+.farm-header img{
+    width:15%;
+}
+
+.farm-header .farm-name{
+    margin: 40px 10px 20px;
+    line-height: 40px;
+}
+
+.farm-header .farm-name a{
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 45px;
+    color: #009;
+    background-color: #fff;
+    box-sizing: border-box ;
+    border: 3px solid #009;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+.farm-header .farm-slogan{
+    margin: 15px;
+}
+
+.farm-header .farm-slogan a{
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #006;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+.farm-header .search-input{
+    margin: 20px 0;
+    width: 450px;
+    padding: 15px 10px;
+    font-size:18px;
+}
+
+.farm-header .search-button{
+    float:right;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+.farm-header .search-button:hover{
+    background-color: #f44336;
+    color:#fff;
+}
+
+.farm-header .ti-arrow-search {
+    font-size: 18px;
+    color: #000;
+    font-weight: 900;
+}
+
+#nav{
+    height: 46px;
+    background-color: #E3E4FD;
+}
+
+#slider{}
+
+#content{}
+
+#footer{}
+
