@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form{
+    
+}
+
+.clear{
+    clear:both;
+}
+
+#koi-farm{
+    margin: 0 240px;
+    background-color: #E8FFED;
+    color:#006;
+}
+
+#header{
+    position: relative;
+    top:40px;
+    margin:40px 60px 80px;
+    text-align: center;
+    background-color: #fff;
+    border:5px solid #006;
+}
+
+#header h1{
+    padding:10px 0;
+}
+
+#slider{}
+
+#content{}
+
+.container-information{
+    padding: 20px 0;
+}
+
+.fill-information{
+    margin: 0 60px;
+    background-color: #DAE8FC;
+    border: 3px solid #ccc ;
+}
+
+.fill-information h2{
+    padding: 10px 5px;
+}
+
+.fill-information form{
+    margin: 0 60px 50px;
+    background-color: #fff;
+    border: 3px solid #F00 ;
+}
+
+.fill-information form li{
+    padding: 5px 10px;
+    display: block;
+}
+
+.fill-information .input{
+    padding: 5px 0;
+    border-radius: 3px;
+    border-color: #ccc;
+}
+
+.fill-information .note{
+    font-size: 10.5px;
+    color:#C40026;
+}
+
+.container-pay{
+    border: 3px solid #ccc ;
+}
+
+.container-pay .transfer-method{
+    float: left;
+    padding: 10px 5px;
+    width: 30%;
+    background-color: #DAE8FC;
+    border: 3px solid #ccc ;
+    display: inline-block;
+}
+
+.pay-bank{
+    height: 622px;
+}
+
+.container-pay .content-pay{
+    padding:0 5px;
+    background-color: #fff;
+    
+}
+
+.container-fill-bank{
+    padding: 20px 0;
+}
+
+.container-pay .fill-bank{
+    background-color: #B9E0A5;
+    border: 3px solid #F00 ;
+}
+
+.container-pay .fill-bank li{
+    padding: 10px;
+    display: block;
+}
+
+.pay-cash{
+    height:333px;
+}
+
+.pay-note{
+    height:277px;
+}
+
+#footer{}

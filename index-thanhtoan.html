@@ -4,8 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matsuda Koi Farm</title>
+    <link rel="stylesheet" href="./assets/css/style-thanhtoan.css">
 </head>
 <body>
+    <div id="koi-farm">
+        <div id="header"><h1>PAY</h1></div>
+        <div id="slider"></div>
+        <div id="content">
+            <div class="container-information">
+                <div class="fill-information">
+                    <h2>Personal Information</h2>
+                    <form>
+                        <li>Full name: 
+                            <input class="input" type="text" placeholder="(kaji)">
+                            <input class="input" type="text" placeholder="(kana)">
+                        </li>
+                        <li>Gender:
+                            <input type="radio" name="sex" value="male" checked>male  
+                            <input type="radio" name="sex" value="female">female
+                        </li>
+                        <li>Age:
+                            <input class="input" type="text" placeholder="">
     
+                        </li>
+                        <li>Email address:
+                            <input class="input" type="text" placeholder="">
+                            <div class="note">(Please enter again for confirmation.)</div>
+                        </li>
+                        <li>E-mail address( For confirmation ):
+                            <input class="input" type="text" placeholder="">
+                        </li>
+                        <li>Address:
+                            <input class="input" type="text" placeholder="">
+                        </li>
+                        <li>Phone number:
+                            <input class="input" type="text" placeholder="">
+                        </li>
+                        <li>Shipping address: <br>
+                            <input type="radio" name="choose" value="Ship to the address as the orderer's address" checked> Ship to the address as the orderer's address 
+                            <br>
+                            <input type="radio" name="choose" value="Ship to an address other than the orderer's address (enter in the product delivery address information)"> Ship to an address other than the orderer's address (enter in the product delivery address information)
+                        </li>
+                        <li><div class="note">*In the case of *2, please also enter the [Product delivery address information] below.</div></li>
+                    </form>
+                </div>
+            </div>
+            <div class="container-information">
+                <div class="fill-information">
+                    <h2>Product Notification</h2>
+                    <form>
+                        <li>Full name:
+                            <input class="input" type="text" placeholder="(kaji)">
+                            <input class="input" type="text" placeholder="(kana)">
+                        </li>
+                        <li>Address:
+                            <input class="input" type="text" placeholder="">
+                        </li>
+                        <li>Prefecture:
+                            <select name="japan-prefectures" id="japan-prefectures">
+                                <option value="">Select Province</option>
+                                <option value="hokkaido">Hokkaido</option>
+                                <option value="aomori">Aomori</option>
+                                <option value="iwate">Iwate</option>
+                                <option value="miyagi">Miyagi</option>
+                                <option value="akita">Akita</option>
+                                <option value="yamagata">Yamagata</option>
+                                <option value="fukushima">Fukushima</option>
+                                <option value="ibaraki">Ibaraki</option>
+                                <option value="tochigi">Tochigi</option>
+                                <option value="gunma">Gunma</option>
+                                <option value="saitama">Saitama</option>
+                                <option value="chiba">Chiba</option>
+                                <option value="tokyo">Tokyo</option>
+                                <option value="kanagawa">Kanagawa</option>
+                                <option value="niigata">Niigata</option>
+                                <option value="toyama">Toyama</option>
+                                <option value="ishikawa">Ishikawa</option>
+                                <option value="fukui">Fukui</option>
+                                <option value="yamanashi">Yamanashi</option>
+                                <option value="nagano">Nagano</option>
+                                <option value="gifu">Gifu</option>
+                                <option value="shizuoka">Shizuoka</option>
+                                <option value="aichi">Aichi</option>
+                                <option value="mie">Mie</option>
+                                <option value="shiga">Shiga</option>
+                                <option value="kyoto">Kyoto</option>
+                                <option value="osaka">Osaka</option>
+                                <option value="hyogo">Hyogo</option>
+                                <option value="nara">Nara</option>
+                                <option value="wakayama">Wakayama</option>
+                                <option value="tottori">Tottori</option>
+                                <option value="shimane">Shimane</option>
+                                <option value="okayama">Okayama</option>
+                                <option value="hiroshima">Hiroshima</option>
+                                <option value="yamaguchi">Yamaguchi</option>
+                                <option value="tokushima">Tokushima</option>
+                                <option value="kagawa">Kagawa</option>
+                                <option value="ehime">Ehime</option>
+                                <option value="kochi">Kochi</option>
+                                <option value="fukuoka">Fukuoka</option>
+                                <option value="saga">Saga</option>
+                                <option value="nagasaki">Nagasaki</option>
+                                <option value="kumamoto">Kumamoto</option>
+                                <option value="oeita">Oita</option>
+                                <option value="miyazaki">Miyazaki</option>
+                                <option value="kagoshima">Kagoshima</option>
+                                <option value="okinawa">Okinawa</option>
+                            </select>
+                        </li>
+                        <li>Subsequent addresses:
+                            <input class="input" type="text" placeholder="">
+                            <div class="note">Example: XX1-XX Mansion, Chuo-ku, Osaka City XXX</div>
+                        </li>
+                        <li>Phone number:
+                            <input class="input" type="text" placeholder="">
+                        </li>
+                    </form>
+                </div>
+            </div>
+            <div class="container-information">
+                <div class="fill-information">
+                    <h2>Select payment method</h2>
+                    <div class="container-pay">
+                        <div class="transfer-method pay-bank">
+                            <input type="radio" name="pay" value="bank" checked>Bank transfer
+                        </div>
+                        <div class="content-pay">
+                            <div class="text-pay">
+                                <p> "Cancellation or change of individual item due to customer's convenience after ordering is not possible"
+                                    After clicking "Proceed to final confirmation screen" ⇒ "Order as there are no mistakes", the order information will be sent to our company. In principle, cancellation or change of individual item due to customer's convenience after that is not possible. Please be careful. Nishikigoi has the characteristic that there are no identical individuals. Please understand that this is fair to other customers. In addition, if you repeatedly cancel or change individual items, we may refrain from future transactions. After
+                                    confirming the order details, we will send you another order confirmation email. Please transfer the money to the account listed in the order confirmation email, and we will ship the product after confirming the payment.</p>
+                                <p>Please note that the transfer fee will be borne by the customer.</p>
+                                <p>*Due to the convenience of arranging the koi, please make the payment as early as possible so that the payment can be confirmed by no later than one bank business day before the shipping date.</p>
+                                <p>If you are making a transfer, please allow at least 5 days from the date of order to the date of arrival.</p>
+                                <p>[Please note]</p>
+                                <p>After checking the inventory, condition, and shipping fee of the ordered item, we will contact you with details such as the official total amount, so please make the transfer after that.</p>
+                                <p>Please enter or write the name of the person placing the order as the name of the person requesting the transfer.</p>
+                                <p>If your name is different, please let us know.</p>
+                                <div class="container-fill-bank">
+                                    <div class="fill-bank" >
+                                        <h3>Enter payment information via bank</h3>
+                                        <li>Bank name:
+                                            <input class="input" type="text" placeholder="">
+                                        </li>
+                                        <li> Account number:
+                                            <input class="input" type="text" placeholder="">
+                                        </li>
+                                        <li><div class="note">*If choosing to pay via bank</div></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="container-pay">
+                        <div class="transfer-method pay-cash">
+                            <input type="radio" name="pay" value="cash" checked>Cash on delivery
+                        </div>
+                        <div class="content-pay">
+                            <div class="text-pay">
+                               <b><p>"Cancellation or change of individual item due to customer's convenience after ordering is not possible"</p></b> 
+                               <p>After clicking "Proceed to final confirmation screen" ⇒ "Order as there are no mistakes", the order information will be sent to our company. In principle, cancellation or change of individual item due to customer's convenience after that is not possible. Please be careful. Nishikigoi has the characteristic that there are no identical individuals. We ask for your understanding as it is fair to other customers. In addition, if you repeatedly cancel or change individual items, we may decline to do business with you in the future.</p>
+                                <b>
+                                    <p>Cash on delivery is not available for first-time customers. We ask for your understanding as there have been many cases of first-time customers refusing to pay cash on delivery or entering a fictitious address, making it impossible to deliver. Cash on delivery is available for second and subsequent orders. Please pay the delivery person when you receive the product.</p>
+                                    <p>*Credit card payment is not available.</p>
+                                </b>
+                                <p>Cash on delivery fees (see below) will be borne by the customer.</p>
+                                <p>COD fee:</p>
+                                <p>Less than 10,000 yen (shipping included): 330 yen</p>
+                                <p>10,000 yen or more but less than 30,000 yen (shipping included): 440 yen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="container-pay">
+                        <div class="transfer-method pay-note">
+                            <input type="radio" name="pay" value="note" checked>Cash note
+                        </div>
+                        <div class="content-pay">
+                            <div class="text-pay">
+                               <b><p>"Cancellation or change of individual item due to customer's convenience after ordering is not possible"</p></b> 
+                               <p>After clicking "Proceed to final confirmation screen" ⇒ "Order as there are no mistakes", the order information will be sent to our company. In principle, cancellation or change of individual item due to customer's convenience after that is not possible. Please be careful. Nishikigoi has the characteristic that there are no identical individuals. We ask for your understanding as it is also fair to other customers. Also, if you repeatedly cancel or change individual items, we may refrain from doing business with you in the future.</p>
+                                <b><p>Please send the payment to our store by registered cash mail, and we will ship the product after receiving the payment.</p></b>
+                                <p>Please note that the registered mail fee will be borne by the customer.</p>
+                                <b>
+                                    <p>[Please note]</p>
+                                    <p>After checking the stock, condition, and shipping fee of the ordered product, we will contact you with details such as the official total amount, so please send the payment by mail after that.</p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+       </div>
 </body>
 </html>
