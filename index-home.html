@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matsuda Koi Farm</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style-home.css">
     <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
    <div id="koi-farm">
     <div id="header">
-        <div id="container-header">
+        <!-- <div id="container-header">
             <div class="farm-header">
-                <!-- <img src="./assets/img/ca-koi.jpg" alt="ca_koi.jpg"> -->
+                <img src="./assets/img/ca-koi.jpg" alt="ca_koi.jpg">
                 <h1 class="farm-name"><a href="">Matsuda Koi Farm</a></h1>
                
                 <p class="farm-slogan"><a href="">We export Japanese nishikigoi to all over the world!</a></p>
@@ -24,8 +24,8 @@
                 </div>
             </div>
             <div class="clear"></div>
-        </div>
-        <div id="nav">
+        </div> -->
+        <ul id="nav">
             <li><a href="">Home</a></li>
             <li><a href="">Koi fish categories</a></li>
             <li><a href="">buying trips</a></li>
@@ -34,11 +34,510 @@
             <li><a href="">diseases</a></li>
             <li><a href="">about</a></li>
             <li><a href="">contact</a></li>
+        </ul>
+        <div class="container-search">
+            <div class="search">
+                <div class="search-input"><input type="text"></div>
+                <div class="search-button">
+                    <i class="ti-arrow-search ti-search"></i>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="clear"></div>
     <div id="slider"></div>
-    <div id="content"></div>
-    <div id="footer"></div>
+    <div id="content">
+        <div class="container-form">
+            <form action="">
+                <div class="part">
+                    <div class="part-name"><li>Name</li></div>
+                    <div class="part-input"><input type="text"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="part">
+                    <div class="part-name"><li>Email address</li></div>
+                    <div class="part-input"><input type="text"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="part">
+                    <div class="part-name"><li>Confirmed email address</li></div>
+                    <div class="part-input"><input type="text"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="part">
+                    <div class="part-name"><li>Address (province)</li></div>
+                    <div class="part-input">
+                        <select name="japan-prefectures" >
+                            <option value="">Please Select</option>
+                            <option value="hokkaido">Hokkaido</option>
+                            <option value="aomori">Aomori</option>
+                            <option value="yamagata">Yamagata</option>
+                            <option value="fukushima">Fukushima</option>
+                            <option value="ibaraki">Ibaraki</option>
+                            <option value="tochigi">Tochigi</option>
+                            <option value="gunma">Gunma</option>
+                            <option value="saitama">Saitama</option>
+                            <option value="chiba">Chiba</option>
+                            <option value="tokyo">Tokyo</option>
+                            <option value="kanagawa">Kanagawa</option>
+                            <option value="niigata">Niigata</option>
+                            <option value="toyama">Toyama</option>
+                            <option value="ishikawa">Ishikawa</option>
+                            <option value="fukui">Fukui</option>
+                            <option value="yamanashi">Yamanashi</option>
+                            <option value="nagano">Nagano</option>
+                            <option value="gifu">Gifu</option>
+                            <option value="shizuoka">Shizuoka</option>
+                            <option value="aichi">Aichi</option>
+                            <option value="mie">Mie</option>
+                            <option value="shiga">Shiga</option>
+                            <option value="kyoto">Kyoto</option>
+                            <option value="osaka">Osaka</option>
+                            <option value="hyogo">Hyogo</option>
+                            <option value="nara">Nara</option>
+                            <option value="wakayama">Wakayama</option>
+                            <option value="tottori">Tottori</option>
+                            <option value="shimane">Shimane</option>
+                            <option value="okayama">Okayama</option>
+                            <option value="hiroshima">Hiroshima</option>
+                            <option value="yamaguchi">Yamaguchi</option>
+                            <option value="tokushima">Tokushima</option>
+                            <option value="kagawa">Kagawa</option>
+                            <option value="ehime">Ehime</option>
+                            <option value="kochi">Kochi</option>
+                            <option value="fukuoka">Fukuoka</option>
+                            <option value="saga">Saga</option>
+                            <option value="nagasaki">Nagasaki</option>
+                            <option value="kumamoto">Kumamoto</option>
+                            <option value="oeita">Oita</option>
+                            <option value="miyazaki">Miyazaki</option>
+                            <option value="kagoshima">Kagoshima</option>
+                            <option value="okinawa">Okinawa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Contact phone number</li></div>
+                <div class="part-input"><input type="text"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Type 1 query</li></div>
+                <div class="part-input">
+                    
+                        <select name="variety" class="part-select">
+                            <option value="">Select a variety</option>
+                            <option value="KOHAKU">KOHAKU</option>
+                            <option value="TAISHO SANSHOKU">TAISHO SANSHOKU</option>
+                            <option value="SHOWA SANSHOKU">SHOWA SANSHOKU</option>
+                            <option value="TANCHO">TANCHO</option>
+                            <option value="SHIROUTSURI">SHIROUTSURI</option>
+                            <option value="HIUTSURI">HIUTSURI</option>
+                            <option value="ASAGI">ASAGI</option>
+                            <option value="AKAMATSUBA">AKAMATSUBA</option>
+                            <option value="SHUSUI">SHUSUI</option>
+                            <option value="KIKUSUI">KIKUSUI</option>
+                            <option value="AIGOROMO">AIGOROMO</option>
+                            <option value="BUDOGOROMO">BUDOGOROMO</option>
+                            <option value="KUMONRYU">KUMONRYU</option>
+                            <option value="BENIKUMONRYU">BENIKUMONRYU</option>
+                            <option value="CHAGOI">CHAGOI</option>
+                            <option value="SORAGOI">SORAGOI</option>
+                            <option value="YAMABUKI OGON">YAMABUKI OGON</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="DAIYA PLATINUM">DAIYA PLATINUM</option>
+                            <option value="GINRIN CHAGOI">GINRIN CHAGOI</option>
+                            <option value="GINRIN SORAGOI">GINRIN SORAGOI</option>
+                            <option value="GINRIN KOHAKU">GINRIN KOHAKU</option>
+                            <option value="GINRIN SHOWA SANSHOKU">GINRIN SHOWA SANSHOKU</option>
+                            <option value="GINRIN TAISHO SANSHOKU">GINRIN TAISHO SANSHOKU</option>
+                            <option value="GINRIN SHIROUTSURI">GINRIN SHIROUTSURI</option>
+                            <option value="KUJAKU OGON">KUJAKU OGON</option>
+                            <option value="GINMATSUBA">GINMATSUBA</option>
+                            <option value="KINSHOWA">KINSHOWA</option>
+                            <option value="DOITSU KOHAKU">DOITSU KOHAKU</option>
+                            <option value="DOITSU TAISHO SANSHOKU">DOITSU TAISHO SANSHOKU</option>
+                            <option value="DOITSU SHOWA SANSHOKU">DOITSU SHOWA SANSHOKU</option>
+                            <option value="HEISEI NISHIKI">HEISEI NISHIKI</option>
+                        </select>
+                        <select name="price range" class="part-select">
+                            <option value="">Select a price range</option>
+                            <option value="&yen 1,000~ &yen 3,000">&yen 1,000~ &yen 3,000</option>
+                            <option value="&yen 3,000~ &yen 5,000">&yen 3,000~ &yen 5,000</option>
+                            <option value="&yen 5,000~ &yen 10,000">&yen 5,000~ &yen 10,000</option>
+                            <option value="&yen 10,000~ &yen 20,000">&yen 10,000~ &yen 20,000</option>
+                            <option value="&yen 20,000~ &yen 30,000">&yen 20,000~ &yen 30,000</option>
+                            <option value="&yen 30,000~ &yen 50,000">&yen 30,000~ &yen 50,000</option>
+                            <option value="&yen 50,000~ &yen 100,000">&yen 50,000~ &yen 100,000</option>
+                            <option value="&yen 100,000 or more">&yen 100,000 or more</option>                   
+                        </select>         
+                        <select name="size" class="part-select">
+                            <option value="">Select size</option>
+                            <option value="20cm or less">20cm or less</option>
+                            <option value="around 21cm ~ 30cm">around 21cm ~ 30cm</option>
+                            <option value="around 31cm ~ 40cm">around 31cm ~ 40cm</option>
+                            <option value="around 41cm ~ 50cm">around 41cm ~ 50cm</option>
+                            <option value="around 51cm ~ 60cm">around 51cm ~ 60cm</option>
+                            <option value="around 61cm ~ 70cm">around 61cm ~ 70cm</option>
+                            <option value="71cm or more">71cm or more</option>
+                        </select>
+                        <select name="quantity" class="part-select">
+                            <option value="">Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="More than 10 animals">More than 10 animals</option>
+                        </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Type 2 query</li></div>
+                <div class="part-input">           
+                        <select name="variety" class="part-select">
+                            <option value="">Select a variety</option>
+                            <option value="KOHAKU">KOHAKU</option>
+                            <option value="TAISHO SANSHOKU">TAISHO SANSHOKU</option>
+                            <option value="SHOWA SANSHOKU">SHOWA SANSHOKU</option>
+                            <option value="TANCHO">TANCHO</option>
+                            <option value="SHIROUTSURI">SHIROUTSURI</option>
+                            <option value="HIUTSURI">HIUTSURI</option>
+                            <option value="ASAGI">ASAGI</option>
+                            <option value="AKAMATSUBA">AKAMATSUBA</option>
+                            <option value="SHUSUI">SHUSUI</option>
+                            <option value="KIKUSUI">KIKUSUI</option>
+                            <option value="AIGOROMO">AIGOROMO</option>
+                            <option value="BUDOGOROMO">BUDOGOROMO</option>
+                            <option value="KUMONRYU">KUMONRYU</option>
+                            <option value="BENIKUMONRYU">BENIKUMONRYU</option>
+                            <option value="CHAGOI">CHAGOI</option>
+                            <option value="SORAGOI">SORAGOI</option>
+                            <option value="YAMABUKI OGON">YAMABUKI OGON</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="DAIYA PLATINUM">DAIYA PLATINUM</option>
+                            <option value="GINRIN CHAGOI">GINRIN CHAGOI</option>
+                            <option value="GINRIN SORAGOI">GINRIN SORAGOI</option>
+                            <option value="GINRIN KOHAKU">GINRIN KOHAKU</option>
+                            <option value="GINRIN SHOWA SANSHOKU">GINRIN SHOWA SANSHOKU</option>
+                            <option value="GINRIN TAISHO SANSHOKU">GINRIN TAISHO SANSHOKU</option>
+                            <option value="GINRIN SHIROUTSURI">GINRIN SHIROUTSURI</option>
+                            <option value="KUJAKU OGON">KUJAKU OGON</option>
+                            <option value="GINMATSUBA">GINMATSUBA</option>
+                            <option value="KINSHOWA">KINSHOWA</option>
+                            <option value="DOITSU KOHAKU">DOITSU KOHAKU</option>
+                            <option value="DOITSU TAISHO SANSHOKU">DOITSU TAISHO SANSHOKU</option>
+                            <option value="DOITSU SHOWA SANSHOKU">DOITSU SHOWA SANSHOKU</option>
+                            <option value="HEISEI NISHIKI">HEISEI NISHIKI</option>
+                        </select>
+                        <select name="price range" class="part-select">
+                            <option value="">Select a price range</option>
+                            <option value="&yen 1,000~ &yen 3,000">&yen 1,000~ &yen 3,000</option>
+                            <option value="&yen 3,000~ &yen 5,000">&yen 3,000~ &yen 5,000</option>
+                            <option value="&yen 5,000~ &yen 10,000">&yen 5,000~ &yen 10,000</option>
+                            <option value="&yen 10,000~ &yen 20,000">&yen 10,000~ &yen 20,000</option>
+                            <option value="&yen 20,000~ &yen 30,000">&yen 20,000~ &yen 30,000</option>
+                            <option value="&yen 30,000~ &yen 50,000">&yen 30,000~ &yen 50,000</option>
+                            <option value="&yen 50,000~ &yen 100,000">&yen 50,000~ &yen 100,000</option>
+                            <option value="&yen 100,000 or more">&yen 100,000 or more</option>                   
+                        </select>         
+                        <select name="size" class="part-select">
+                            <option value="">Select size</option>
+                            <option value="20cm or less">20cm or less</option>
+                            <option value="around 21cm ~ 30cm">around 21cm ~ 30cm</option>
+                            <option value="around 31cm ~ 40cm">around 31cm ~ 40cm</option>
+                            <option value="around 41cm ~ 50cm">around 41cm ~ 50cm</option>
+                            <option value="around 51cm ~ 60cm">around 51cm ~ 60cm</option>
+                            <option value="around 61cm ~ 70cm">around 61cm ~ 70cm</option>
+                            <option value="71cm or more">71cm or more</option>
+                        </select>
+                        <select name="quantity" class="part-select">
+                            <option value="">Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="More than 10 animals">More than 10 animals</option>
+                        </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Type 3 query</li></div>
+                <div class="part-input">             
+                        <select name="variety" class="part-select">
+                            <option value="">Select a variety</option>
+                            <option value="KOHAKU">KOHAKU</option>
+                            <option value="TAISHO SANSHOKU">TAISHO SANSHOKU</option>
+                            <option value="SHOWA SANSHOKU">SHOWA SANSHOKU</option>
+                            <option value="TANCHO">TANCHO</option>
+                            <option value="SHIROUTSURI">SHIROUTSURI</option>
+                            <option value="HIUTSURI">HIUTSURI</option>
+                            <option value="ASAGI">ASAGI</option>
+                            <option value="AKAMATSUBA">AKAMATSUBA</option>
+                            <option value="SHUSUI">SHUSUI</option>
+                            <option value="KIKUSUI">KIKUSUI</option>
+                            <option value="AIGOROMO">AIGOROMO</option>
+                            <option value="BUDOGOROMO">BUDOGOROMO</option>
+                            <option value="KUMONRYU">KUMONRYU</option>
+                            <option value="BENIKUMONRYU">BENIKUMONRYU</option>
+                            <option value="CHAGOI">CHAGOI</option>
+                            <option value="SORAGOI">SORAGOI</option>
+                            <option value="YAMABUKI OGON">YAMABUKI OGON</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="DAIYA PLATINUM">DAIYA PLATINUM</option>
+                            <option value="GINRIN CHAGOI">GINRIN CHAGOI</option>
+                            <option value="GINRIN SORAGOI">GINRIN SORAGOI</option>
+                            <option value="GINRIN KOHAKU">GINRIN KOHAKU</option>
+                            <option value="GINRIN SHOWA SANSHOKU">GINRIN SHOWA SANSHOKU</option>
+                            <option value="GINRIN TAISHO SANSHOKU">GINRIN TAISHO SANSHOKU</option>
+                            <option value="GINRIN SHIROUTSURI">GINRIN SHIROUTSURI</option>
+                            <option value="KUJAKU OGON">KUJAKU OGON</option>
+                            <option value="GINMATSUBA">GINMATSUBA</option>
+                            <option value="KINSHOWA">KINSHOWA</option>
+                            <option value="DOITSU KOHAKU">DOITSU KOHAKU</option>
+                            <option value="DOITSU TAISHO SANSHOKU">DOITSU TAISHO SANSHOKU</option>
+                            <option value="DOITSU SHOWA SANSHOKU">DOITSU SHOWA SANSHOKU</option>
+                            <option value="HEISEI NISHIKI">HEISEI NISHIKI</option>
+                        </select>
+                        <select name="price range" class="part-select">
+                            <option value="">Select a price range</option>
+                            <option value="&yen 1,000~ &yen 3,000">&yen 1,000~ &yen 3,000</option>
+                            <option value="&yen 3,000~ &yen 5,000">&yen 3,000~ &yen 5,000</option>
+                            <option value="&yen 5,000~ &yen 10,000">&yen 5,000~ &yen 10,000</option>
+                            <option value="&yen 10,000~ &yen 20,000">&yen 10,000~ &yen 20,000</option>
+                            <option value="&yen 20,000~ &yen 30,000">&yen 20,000~ &yen 30,000</option>
+                            <option value="&yen 30,000~ &yen 50,000">&yen 30,000~ &yen 50,000</option>
+                            <option value="&yen 50,000~ &yen 100,000">&yen 50,000~ &yen 100,000</option>
+                            <option value="&yen 100,000 or more">&yen 100,000 or more</option>                   
+                        </select>         
+                        <select name="size" class="part-select">
+                            <option value="">Select size</option>
+                            <option value="20cm or less">20cm or less</option>
+                            <option value="around 21cm ~ 30cm">around 21cm ~ 30cm</option>
+                            <option value="around 31cm ~ 40cm">around 31cm ~ 40cm</option>
+                            <option value="around 41cm ~ 50cm">around 41cm ~ 50cm</option>
+                            <option value="around 51cm ~ 60cm">around 51cm ~ 60cm</option>
+                            <option value="around 61cm ~ 70cm">around 61cm ~ 70cm</option>
+                            <option value="71cm or more">71cm or more</option>
+                        </select>
+                        <select name="quantity" class="part-select">
+                            <option value="">Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="More than 10 animals">More than 10 animals</option>
+                        </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Type 4 query</li></div>
+                <div class="part-input">
+                    
+                        <select name="variety" class="part-select">
+                            <option value="">Select a variety</option>
+                            <option value="KOHAKU">KOHAKU</option>
+                            <option value="TAISHO SANSHOKU">TAISHO SANSHOKU</option>
+                            <option value="SHOWA SANSHOKU">SHOWA SANSHOKU</option>
+                            <option value="TANCHO">TANCHO</option>
+                            <option value="SHIROUTSURI">SHIROUTSURI</option>
+                            <option value="HIUTSURI">HIUTSURI</option>
+                            <option value="ASAGI">ASAGI</option>
+                            <option value="AKAMATSUBA">AKAMATSUBA</option>
+                            <option value="SHUSUI">SHUSUI</option>
+                            <option value="KIKUSUI">KIKUSUI</option>
+                            <option value="AIGOROMO">AIGOROMO</option>
+                            <option value="BUDOGOROMO">BUDOGOROMO</option>
+                            <option value="KUMONRYU">KUMONRYU</option>
+                            <option value="BENIKUMONRYU">BENIKUMONRYU</option>
+                            <option value="CHAGOI">CHAGOI</option>
+                            <option value="SORAGOI">SORAGOI</option>
+                            <option value="YAMABUKI OGON">YAMABUKI OGON</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="DAIYA PLATINUM">DAIYA PLATINUM</option>
+                            <option value="GINRIN CHAGOI">GINRIN CHAGOI</option>
+                            <option value="GINRIN SORAGOI">GINRIN SORAGOI</option>
+                            <option value="GINRIN KOHAKU">GINRIN KOHAKU</option>
+                            <option value="GINRIN SHOWA SANSHOKU">GINRIN SHOWA SANSHOKU</option>
+                            <option value="GINRIN TAISHO SANSHOKU">GINRIN TAISHO SANSHOKU</option>
+                            <option value="GINRIN SHIROUTSURI">GINRIN SHIROUTSURI</option>
+                            <option value="KUJAKU OGON">KUJAKU OGON</option>
+                            <option value="GINMATSUBA">GINMATSUBA</option>
+                            <option value="KINSHOWA">KINSHOWA</option>
+                            <option value="DOITSU KOHAKU">DOITSU KOHAKU</option>
+                            <option value="DOITSU TAISHO SANSHOKU">DOITSU TAISHO SANSHOKU</option>
+                            <option value="DOITSU SHOWA SANSHOKU">DOITSU SHOWA SANSHOKU</option>
+                            <option value="HEISEI NISHIKI">HEISEI NISHIKI</option>
+                        </select>
+                        <select name="price range" class="part-select">
+                            <option value="">Select a price range</option>
+                            <option value="&yen 1,000~ &yen 3,000">&yen 1,000~ &yen 3,000</option>
+                            <option value="&yen 3,000~ &yen 5,000">&yen 3,000~ &yen 5,000</option>
+                            <option value="&yen 5,000~ &yen 10,000">&yen 5,000~ &yen 10,000</option>
+                            <option value="&yen 10,000~ &yen 20,000">&yen 10,000~ &yen 20,000</option>
+                            <option value="&yen 20,000~ &yen 30,000">&yen 20,000~ &yen 30,000</option>
+                            <option value="&yen 30,000~ &yen 50,000">&yen 30,000~ &yen 50,000</option>
+                            <option value="&yen 50,000~ &yen 100,000">&yen 50,000~ &yen 100,000</option>
+                            <option value="&yen 100,000 or more">&yen 100,000 or more</option>                   
+                        </select>         
+                        <select name="size" class="part-select">
+                            <option value="">Select size</option>
+                            <option value="20cm or less">20cm or less</option>
+                            <option value="around 21cm ~ 30cm">around 21cm ~ 30cm</option>
+                            <option value="around 31cm ~ 40cm">around 31cm ~ 40cm</option>
+                            <option value="around 41cm ~ 50cm">around 41cm ~ 50cm</option>
+                            <option value="around 51cm ~ 60cm">around 51cm ~ 60cm</option>
+                            <option value="around 61cm ~ 70cm">around 61cm ~ 70cm</option>
+                            <option value="71cm or more">71cm or more</option>
+                        </select>
+                        <select name="quantity" class="part-select">
+                            <option value="">Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="More than 10 animals">More than 10 animals</option>
+                        </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-name"><li>Type 5 query</li></div>
+                <div class="part-input">
+                    
+                        <select name="variety" class="part-select">
+                            <option value="">Select a variety</option>
+                            <option value="KOHAKU">KOHAKU</option>
+                            <option value="TAISHO SANSHOKU">TAISHO SANSHOKU</option>
+                            <option value="SHOWA SANSHOKU">SHOWA SANSHOKU</option>
+                            <option value="TANCHO">TANCHO</option>
+                            <option value="SHIROUTSURI">SHIROUTSURI</option>
+                            <option value="HIUTSURI">HIUTSURI</option>
+                            <option value="ASAGI">ASAGI</option>
+                            <option value="AKAMATSUBA">AKAMATSUBA</option>
+                            <option value="SHUSUI">SHUSUI</option>
+                            <option value="KIKUSUI">KIKUSUI</option>
+                            <option value="AIGOROMO">AIGOROMO</option>
+                            <option value="BUDOGOROMO">BUDOGOROMO</option>
+                            <option value="KUMONRYU">KUMONRYU</option>
+                            <option value="BENIKUMONRYU">BENIKUMONRYU</option>
+                            <option value="CHAGOI">CHAGOI</option>
+                            <option value="SORAGOI">SORAGOI</option>
+                            <option value="YAMABUKI OGON">YAMABUKI OGON</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="DAIYA PLATINUM">DAIYA PLATINUM</option>
+                            <option value="GINRIN CHAGOI">GINRIN CHAGOI</option>
+                            <option value="GINRIN SORAGOI">GINRIN SORAGOI</option>
+                            <option value="GINRIN KOHAKU">GINRIN KOHAKU</option>
+                            <option value="GINRIN SHOWA SANSHOKU">GINRIN SHOWA SANSHOKU</option>
+                            <option value="GINRIN TAISHO SANSHOKU">GINRIN TAISHO SANSHOKU</option>
+                            <option value="GINRIN SHIROUTSURI">GINRIN SHIROUTSURI</option>
+                            <option value="KUJAKU OGON">KUJAKU OGON</option>
+                            <option value="GINMATSUBA">GINMATSUBA</option>
+                            <option value="KINSHOWA">KINSHOWA</option>
+                            <option value="DOITSU KOHAKU">DOITSU KOHAKU</option>
+                            <option value="DOITSU TAISHO SANSHOKU">DOITSU TAISHO SANSHOKU</option>
+                            <option value="DOITSU SHOWA SANSHOKU">DOITSU SHOWA SANSHOKU</option>
+                            <option value="HEISEI NISHIKI">HEISEI NISHIKI</option>
+                        </select>
+                        <select name="price range" class="part-select">
+                            <option value="">Select a price range</option>
+                            <option value="&yen 1,000~ &yen 3,000">&yen 1,000~ &yen 3,000</option>
+                            <option value="&yen 3,000~ &yen 5,000">&yen 3,000~ &yen 5,000</option>
+                            <option value="&yen 5,000~ &yen 10,000">&yen 5,000~ &yen 10,000</option>
+                            <option value="&yen 10,000~ &yen 20,000">&yen 10,000~ &yen 20,000</option>
+                            <option value="&yen 20,000~ &yen 30,000">&yen 20,000~ &yen 30,000</option>
+                            <option value="&yen 30,000~ &yen 50,000">&yen 30,000~ &yen 50,000</option>
+                            <option value="&yen 50,000~ &yen 100,000">&yen 50,000~ &yen 100,000</option>
+                            <option value="&yen 100,000 or more">&yen 100,000 or more</option>                   
+                        </select>         
+                        <select name="size" class="part-select">
+                            <option value="">Select size</option>
+                            <option value="20cm or less">20cm or less</option>
+                            <option value="around 21cm ~ 30cm">around 21cm ~ 30cm</option>
+                            <option value="around 31cm ~ 40cm">around 31cm ~ 40cm</option>
+                            <option value="around 41cm ~ 50cm">around 41cm ~ 50cm</option>
+                            <option value="around 51cm ~ 60cm">around 51cm ~ 60cm</option>
+                            <option value="around 61cm ~ 70cm">around 61cm ~ 70cm</option>
+                            <option value="71cm or more">71cm or more</option>
+                        </select>
+                        <select name="quantity" class="part-select">
+                            <option value="">Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="More than 10 animals">More than 10 animals</option>
+                        </select>
+                </div>
+            </div>
+            <div class="clear"></div>
+            
+            <div class="part">
+                <div class="part-name name"><li>Request details</li></div>
+                <div class="request-input">
+                    <textarea id="text-input" rows="5" class="word" ></textarea><br>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-checkbox"><input type="checkbox" >After confirming the submission above, please check the box on the left.</div>
+            </div>
+            <div class="clear"></div>
+            <div class="part">
+                <div class="part-send"><button>SEND</button></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        </form>
+        </div>
+    <div id="footer">
+        <div class="container-footer">
+            <p>If you are unable to submit using the form, you can also send us an email directly.</p>
+            <p>Please send to <a href="">email</a></p>
+            <p>We have prepared a dedicated inquiry and order form (PDF format). Click <a href="">download</a></p>
+            <p>Please print it out at home, fill in the necessary information, and send it to the number on the right. FAX: 0258-86-0011</p>
+            <p><b>Matsuda Koi Farm (Niigata Prefectural Government Agriculture and Forestry Division, August 2005) 1463-1 Settayacho, Nagaoka City, Niigata Prefecture, 940-1104</b></p>
+            <p><b>Yokomakura House Office 245-1 Yokomakuracho, Nagaoka City, Niigata Prefecture, 940-1117</b></p>
+            <p><b>TEL: 0258-37-3722 FAX: 0258-86-0011</b></p>
+            <p><b>E-mail: </b><a href="">email</a></p>
+            <p><b>© 2024 Matsuda Koi Farm</b></p>
+        </div>
+    </div>
    </div>
+</div>
 </body>
 </html>
