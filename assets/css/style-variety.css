@@ -32,15 +32,19 @@ h1 {
     
 }
 
+.koi-image{
+    width: 30%;
+}
+
 .koi-image img {
-    width: 300px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .koi-info {
-    width: 700px;
+    width: 70%;
     margin-left: 20px;
     border: 2px solid #ccc;
     padding: 20px;
@@ -65,11 +69,7 @@ h1 {
     width:100%;
 }
 
-.koi-info a {
-    color: #673ab7;
-    text-decoration: none;
-}
-
 .koi-info a:hover {
+    color:purple;
     text-decoration: underline;
 }
