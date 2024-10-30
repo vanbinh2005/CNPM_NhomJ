@@ -22,12 +22,7 @@ h1{
     padding: 20px 0;
     
 }
-h2{
-    color:red;
-}
-#content{
-   
-}
+
 .container-intro{
 background-color: #FFF  ;
 display: flex; 
@@ -69,6 +64,11 @@ h4{
     padding: 5px 0;
 
 }
+
+.container{
+    margin-bottom: 40px;
+}
+
 .tieude{
     padding: 20px;
 }
@@ -77,6 +77,7 @@ h4{
 }
 #d5{
     width: 40%;
+    padding: 10px;
     float: right;
     border: 2px solid #CCC;
     background-color:#FFF ;
@@ -100,6 +101,7 @@ h4{
 #d7{
     background-color: #FFF;
     margin: 10px;
+    padding: 10px;
     border: 2px solid #ccc;
     width: 100%;
     
