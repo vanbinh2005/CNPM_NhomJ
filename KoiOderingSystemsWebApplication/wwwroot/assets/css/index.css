@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear:both;
+}
+/* 
+    từ trên xuống dưới
+    từ trái sang phải
+    từ tổng quan đến chi tiết
+    css:
+    vị trí
+    kích thước
+    màu sắc
+    kiểu dáng
+*/
+#koi-farm{}
+
+#header{
+  overflow: hidden; 
+  white-space: nowrap;
+  height: 46px;
+  width: 100%;
+  background-color: #006;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* #container-header{
+    position: relative;
+    height:240px;
+    background-color: #D5E8D4;
+}
+
+.farm-header{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    
+}
+
+.farm-header img{
+    width:15%;
+}
+
+.farm-header .farm-name{
+    margin: 40px 10px 20px;
+    line-height: 40px;
+}
+
+.farm-header .farm-name a{
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 45px;
+    color: #009;
+    background-color: #fff;
+    box-sizing: border-box ;
+    border: 3px solid #009;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+.farm-header .farm-slogan{
+    margin: 15px;
+}
+
+.farm-header .farm-slogan a{
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #006;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+.farm-header .search-input{
+    margin: 20px 0;
+    width: 450px;
+    padding: 15px 10px;
+    font-size:18px;
+}
+
+.farm-header .search-button{
+    float:right;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+.farm-header .search-button:hover{
+    background-color: #f44336;
+    color:#fff;
+}
+
+.farm-header .ti-arrow-search {
+    font-size: 18px;
+    color: #000;
+    font-weight: 900;
+} */
+
+#nav{
+    float: left;
+    align-items: center;
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a {
+    text-transform: uppercase;
+  }
+
+#nav li a{
+  color: #fff;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 15px;
+}
+
+#nav > li:hover > a{
+    background-color: #fff;
+    color: #006;
+    display: block;
+}
+
+#nav li:hover a{
+    display: inline-block;
+}
+
+.container-search{
+margin-right: 10px;
+}
+
+.search{
+    float: right;
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search .search-input{
+    align-items: center;
+    line-height:46px;
+    display: inline-block;
+}
+
+.search .search-input input{
+    line-height: 30px;
+    width: 200px;
+    border-radius: 6px;
+}
+
+.search .search-button{
+    margin: 0 10px;
+    padding: 0 14px;
+    line-height:46px;
+    background-color: #006;
+    color: #fff;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.search > .search-button:hover{
+    background-color: #F00;
+    color: #fff;
+}
+#footer{
+    position: absolute;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.container-footer{
+    padding: 10px;
+    background-color: #006;
+    color:#fff;
+    text-align: center;
+}
+
+.container-footer p{
+    padding: 5px 0;
+}

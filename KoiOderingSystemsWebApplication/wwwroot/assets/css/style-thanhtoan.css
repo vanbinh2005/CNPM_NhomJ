@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    padding:10px 0;
+}
+
+h3{
+    text-align: center;
+}
+
+.tran{
+    transform: translateX(30%);
+}
+
+.clear{
+    clear:both;
+}
+
+#koi-farm{
+    min-width: none;
+    background-color: #E8FFED;
+    color:#006;
+}
+
+#header{
+    position: relative;
+    top:40px;
+    margin:40px 60px 80px;
+    text-align: center;
+    background-color: #fff;
+    border:5px solid #006;
+}
+
+#slider{}
+
+#content{}
+
+.container-information{
+    padding: 20px 0;
+}
+
+.fill-information{
+    margin: 0 60px;
+    background-color: #DAE8FC;
+    border: 3px solid #ccc ;
+}
+
+.fill-information h2{
+    padding: 10px 5px;
+}
+
+.fill-information form{
+    margin: 0 60px 50px;
+    padding:0 0 5px 0;
+    background-color: #fff;
+    border: 3px solid #F00 ;
+}
+
+.fill-information form .part{
+    padding: 5px;
+    min-height: 26px;
+}
+
+.fill-information form li{
+    float: left;
+    padding: 5px 10px;
+    width: 30%;
+    font-size: 14px;
+    color: #aaa;
+    display: block;
+}
+
+.fill-information .part-input{
+    float: right;
+    width: 70%;
+    padding: 5px 0;
+    border-radius: 3px;
+    border-color: #ccc;
+}
+
+.fill-information .note{
+    font-size: 10.5px;
+    color:#C40026;
+}
+
+.container-fill-bank{
+    padding: 20px 0;
+    background-color: #B9E0A5;
+    border: 3px solid #F00 ;
+}
+
+
+
+.pay-cash{
+    height:333px;
+}
+
+.pay-note{
+    height:277px;
+}
+
+img{
+    width: 100%;
+}
+
+.question-input{
+    padding:0 15px;
+    width: 100%;
+    
+}
+
+.question-input .word{
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid;
+}
+
+.submit{
+    display: flex;
+    padding:20px 0 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.submit .sb{
+    float: left;
+    padding: 0 20px;
+}
+
+.submit button{
+    padding: 5px 8px;
+    font-size: 20px;
+    color:#006;
+    background-color: #fff;
+    border-radius: 8px;
+    border:2px solid #006;
+}
+
+.submit button:hover{
+    background-color: #006;
+    color: #fff;
+    
+}
+
+#footer{}
