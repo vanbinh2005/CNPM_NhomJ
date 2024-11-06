@@ -9,7 +9,7 @@ namespace KoiOderingSystemsRepositories.Interfaces
 {
     public interface IAccountRepository
     {
-        Task<List<Account>> GetAllAccount();
+        //Task<List<Account>> GetAllAccount();
 
     }
 }

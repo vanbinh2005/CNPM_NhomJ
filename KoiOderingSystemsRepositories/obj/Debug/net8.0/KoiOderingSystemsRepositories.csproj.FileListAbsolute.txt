@@ -20,3 +20,4 @@ D:\CNPM\KoiOderingSystems\KoiOderingSystemsRepositories\obj\Debug\net8.0\KoiOder
 D:\CNPM\KoiOderingSystems\KoiOderingSystemsRepositories\obj\Debug\net8.0\ref\KoiOderingSystemsRepositories.dll
 D:\CNPM\KoiOderingSystems\KoiOderingSystemsRepositories\bin\Debug\net8.0\KoiOderingSystemsRepositories.runtimeconfig.json
 D:\CNPM\KoiOderingSystems\KoiOderingSystemsRepositories\obj\Debug\net8.0\KoiOderingSystemsRepositories.genruntimeconfig.cache
+D:\CNPM\KoiOderingSystems\KoiOderingSystemsRepositories\obj\Debug\net8.0\KoiOderingSystemsRepositories.sourcelink.json

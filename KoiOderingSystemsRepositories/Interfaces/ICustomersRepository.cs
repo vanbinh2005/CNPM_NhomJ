@@ -9,7 +9,7 @@ namespace KoiOderingSystemsRepositories.Interfaces
 {
     public interface ICustomersRepository
     {
-        Task<IEnumerable<Customer>> GetAllCustomersAccount();
+       // Task<IEnumerable<Customer>> GetAllCustomersAccount();
         
     }
 }
