@@ -1,9 +1,11 @@
-﻿using System;
+
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace KoiOderingSystemsRepositories.Entities;
 
-public partial class CategoryKoi
+public partial class Product
 {
     public int KoiId { get; set; }
 
@@ -14,6 +16,7 @@ public partial class CategoryKoi
     public decimal Price { get; set; }
 
     public int StockQuantity { get; set; }
+
 
     public int Size { get; set; }
 }
