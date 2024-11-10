@@ -1,12 +1,15 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KoiOderingSystemsRepositories.Entities;
 
 namespace KoiOderingSystemsRepositories.Interfaces
 {
-    internal interface IOrdersRepository
+    public interface IOrdersRepository
     {
+        Task<List<Order>> GetAllOrders();
     }
 }
