@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsuda Koi Farm</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+        <div id="header">
+         
+            <ul id="nav">
+                <li><a href="index-home.html">Home</a></li>
+                <li><a href="index-categories.html">Koi fish categories</a></li>
+                <li><a href="index-buy.html">buying trips</a></li>
+                <li><a href="index-variety.html">variety</a></li>
+                <li><a href="index-guidelines.html">guidelines</a></li>
+                <li><a href="index-disease.html">diseases</a></li>
+                <li><a href="index-about.html">about</a></li>
+                <li><a href="index-contact.html">contact</a></li>
+            </ul>
+            <div class="container-search">
+                <div class="search">
+                    <div class="search-input"><input type="text"></div>
+                    <div class="search-button">
+                        <i class="ti-arrow-search ti-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-button">
+                <button id="authButton" onclick="handleAuthButton()">Log in / Register</button>
+              </div>
+        </div>
+        
+        <script>
+            // Hàm chuyển đổi nút và xử lý đăng nhập/đăng xuất
+            function handleAuthButton() {
+              const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+              
+              if (isLoggedIn === "true") {
+                logout();
+              } else {
+                redirectToLogin();
+              }
+            }
+          
+            // Hàm chuyển hướng đến trang đăng nhập/đăng ký
+            function redirectToLogin() {
+              // Sau khi đăng nhập thành công, lưu trạng thái đăng nhập
+              window.location.href = "index-login.html";
+              sessionStorage.setItem("isLoggedIn", "true");
+            }
+          
+            // Hàm xử lý đăng xuất
+            function logout() {
+              sessionStorage.removeItem("isLoggedIn");
+              updateAuthButton();
+              window.location.href = "index-home.html";
+            }
+          
+            // Hàm cập nhật nội dung của nút
+            function updateAuthButton() {
+              const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+              const authButton = document.getElementById("authButton");
+          
+              if (isLoggedIn === "true") {
+                authButton.textContent = "Log out";
+              } else {
+                authButton.textContent = "Log in / Register";
+              }
+            }
+          
+            // Cập nhật nút khi tải trang
+            window.onload = updateAuthButton;
+          </script>
+          
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matsuda Koi farm</title>
+ <link rel="stylesheet" href="/assets/css/style-login.css">
+</head>
+<body>
+
+  <div class="login-container" id="loginContainer">
+    <h2>LOG IN</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="User name" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      
+      <!-- Thêm lựa chọn chức vụ -->
+      <select id="loginRole" required>
+        <option value="">Role</option>
+        <option value="manager">Manager</option>
+        <option value="employee">Sales Staff</option>
+        <option value="employee">Consulting Staff</option>
+        <option value="employee">Delivering Staff</option>
+        <option value="guest">Customer</option>
+      </select>
+      
+      <button type="button" onclick="login()">Log in</button>
+      <div class="error" id="loginError"></div>
+    </form>
+    <div class="switch-mode" onclick="toggleForm()">New member? Register here</div>
+  </div>
+
+  <div class="register-container" id="registerContainer" style="display: none;">
+    <h2>REGISTER</h2>
+    <form id="registerForm">
+      <input type="text" id="registerUsername" placeholder="Username" required>
+      <input type="password" id="registerPassword" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+      <select id="registerRole" required>
+        <option value="">Role</option>
+        <option value="manager">Manager</option>
+        <option value="employee">Sales Staff</option>
+        <option value="employee">Consulting Staff</option>
+        <option value="employee">Delivering Staff</option>
+        <option value="guest">Customer</option>
+      </select>
+
+      <button type="button" onclick="register()">Register</button>
+      <div class="error" id="registerError"></div>
+    </form>
+    <div class="switch-mode" onclick="toggleForm()">Already have an account? Log in here</div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      const loginContainer = document.getElementById("loginContainer");
+      const registerContainer = document.getElementById("registerContainer");
+      if (loginContainer.style.display === "none") {
+        loginContainer.style.display = "block";
+        registerContainer.style.display = "none";
+      } else {
+        loginContainer.style.display = "none";
+        registerContainer.style.display = "block";
+      }
+    }
+
+    function login() {
+      const username = document.getElementById("loginUsername").value;
+      const password = document.getElementById("loginPassword").value;
+      const role = document.getElementById("loginRole").value;
+      const errorElement = document.getElementById("loginError");
+      if (!username || !password || !role) {
+        errorElement.textContent = "Please enter complete information and select your position.";
+      } else {
+        errorElement.textContent = "";
+        window.location.href = "index-home.html"; 
+      }
+    }
+
+    
+    
+
+    function register() {
+      const username = document.getElementById("registerUsername").value;
+      const password = document.getElementById("registerPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const role = document.getElementById("registerRole").value;
+      const errorElement = document.getElementById("registerError");
+
+      if (!username || !password || !confirmPassword || !role) {
+        errorElement.textContent = "Please enter complete information and select your position.";
+      } else if (password !== confirmPassword) {
+        errorElement.textContent = "The confirmation password doesn't match.";
+      } else {
+        errorElement.textContent = "";
+        window.location.href = "index-home.html"; 
+      }
+    }
+  </script>
+
+</body>
+</html>

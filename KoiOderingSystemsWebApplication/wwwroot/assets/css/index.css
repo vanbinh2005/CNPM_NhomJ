@@ -19,7 +19,9 @@ html{
     màu sắc
     kiểu dáng
 */
-#koi-farm{}
+#koi-farm{
+    
+}
 
 #header{
   overflow: hidden; 
@@ -34,81 +36,6 @@ html{
   z-index: 1;
 }
 
-/* #container-header{
-    position: relative;
-    height:240px;
-    background-color: #D5E8D4;
-}
-
-.farm-header{
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    
-}
-
-.farm-header img{
-    width:15%;
-}
-
-.farm-header .farm-name{
-    margin: 40px 10px 20px;
-    line-height: 40px;
-}
-
-.farm-header .farm-name a{
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 45px;
-    color: #009;
-    background-color: #fff;
-    box-sizing: border-box ;
-    border: 3px solid #009;
-    letter-spacing: 3px;
-    font-weight: 600;
-    text-decoration: none; 
-}
-
-.farm-header .farm-slogan{
-    margin: 15px;
-}
-
-.farm-header .farm-slogan a{
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #006;
-    font-weight: 600;
-    text-decoration: none; 
-}
-
-.farm-header .search-input{
-    margin: 20px 0;
-    width: 450px;
-    padding: 15px 10px;
-    font-size:18px;
-}
-
-.farm-header .search-button{
-    float:right;
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #fff;
-    border: 2px solid #000;
-    text-align: center;
-}
-
-.farm-header .search-button:hover{
-    background-color: #f44336;
-    color:#fff;
-}
-
-.farm-header .ti-arrow-search {
-    font-size: 18px;
-    color: #000;
-    font-weight: 900;
-} */
 
 #nav{
     float: left;
@@ -182,19 +109,26 @@ margin-right: 10px;
     background-color: #F00;
     color: #fff;
 }
-#footer{
-    position: absolute;
-    margin-top: 100px;
-    width: 100%;
+.auth-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    
+    margin-right: 15px;
 }
 
-.container-footer{
-    padding: 10px;
+.auth-button button {
     background-color: #006;
-    color:#fff;
-    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height:46px;
+    cursor: pointer;
 }
 
-.container-footer p{
-    padding: 5px 0;
+.auth-button button:hover {
+    background-color: #F00;
+    color: #fff;
 }

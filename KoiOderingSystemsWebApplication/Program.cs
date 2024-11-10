@@ -1,8 +1,19 @@
+using KoiOderingSystemsRepositories;
+using KoiOderingSystemsRepositories.Entities;
+using KoiOderingSystemsRepositories.Interfaces;
+using KoiOderingSystemsServices;
+using KoiOderingSystemsServices.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+//DI
+builder.Services.AddDbContext<KoiOrderingFarmDbContext>();
+//DI Repository
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+// DI Service
+builder.Services.AddScoped<IAccountServices, AccountServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

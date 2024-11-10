@@ -20,6 +20,17 @@ html{
     color:#006;
     display: inline-block;
 }
+h1 {
+    padding:20px 0;
+    display: inline-block;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+h2{
+    padding: 10px;
+    font-size: 20px;
+  }
 
 .container{
     padding: 20px;

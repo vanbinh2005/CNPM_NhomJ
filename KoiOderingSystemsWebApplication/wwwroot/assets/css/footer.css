@@ -9,21 +9,10 @@ html{
 .clear{
     clear:both;
 }
-/* 
-    từ trên xuống dưới
-    từ trái sang phải
-    từ tổng quan đến chi tiết
-    css:
-    vị trí
-    kích thước
-    màu sắc
-    kiểu dáng
-*/
-#koi-farm{}
-
 #footer{
     position: absolute;
-    margin-top: 100px;
+    padding-top: 100px;
+    background-color: #E8FFED;
     width: 100%;
 }
 
