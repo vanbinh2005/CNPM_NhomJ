@@ -1,4 +1,4 @@
-﻿using KoiOderingSystemsRepositories.Entities;
+using KoiOderingSystemsRepositories.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace KoiOderingSystemsRepositories.Interfaces
 {
-    public interface ICustomersRepository
+    public interface ICustomerRepository
     {
-       // Task<IEnumerable<Customer>> GetAllCustomersAccount();
+        Task<List<Customer>> GetAllCustomer();
         
     }
 }
