@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace KoiOderingSystemsRepositories.Interfaces
 {
     public interface ICustomerRepository
     {
         Task<List<Customer>> GetAllCustomer();
-        
+        Task<Customer> AddCustomerAsync(Customer customer);
+        Task<Customer> GetCustomerByIdAsync(int id);
     }
 }
