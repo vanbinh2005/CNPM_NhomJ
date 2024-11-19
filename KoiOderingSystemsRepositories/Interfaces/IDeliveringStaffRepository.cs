@@ -1,15 +1,14 @@
-﻿using System;
+﻿using KoiOderingSystemsRepositories.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiOderingSystemsRepositories.Entities;
 
 namespace KoiOderingSystemsRepositories.Interfaces
 {
-    public interface IAccountRepository
+    public interface IDeliveringStaffRepository
     {
-        Task<List<Account>> GetAllAccount();
-
+        Task<List<Deliveringstaff>> GetAllDeliveringstaff();
     }
 }

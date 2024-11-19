@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +8,10 @@ using KoiOderingSystemsRepositories.Entities;
 
 namespace KoiOderingSystemsRepositories.Interfaces
 {
-    public interface IAccountRepository
+    public interface IOrderRepository
     {
-        Task<List<Account>> GetAllAccount();
-
+        Task<Order> CreateOrder(Order order);
+        Task<Order> GetOrderById(int orderId);
     }
+
 }

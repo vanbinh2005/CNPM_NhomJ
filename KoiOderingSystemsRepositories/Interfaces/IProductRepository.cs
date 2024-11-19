@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +7,10 @@ using KoiOderingSystemsRepositories.Entities;
 
 namespace KoiOderingSystemsRepositories.Interfaces
 {
-    public interface IAccountRepository
+    public interface IProductRepository
     {
-        Task<List<Account>> GetAllAccount();
-
+        Task<Product> GetProductById(int productId);
+        Task<List<Product>> GetAllProducts();
     }
+
 }
