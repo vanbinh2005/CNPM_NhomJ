@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear:both;
+}
+/* 
+    từ trên xuống dưới
+    từ trái sang phải
+    từ tổng quan đến chi tiết
+    css:
+    vị trí
+    kích thước
+    màu sắc
+    kiểu dáng
+*/
+#koi-farm{
+    
+}
+
+#header{
+  overflow: hidden; 
+  white-space: nowrap;
+  height: 46px;
+  width: 100%;
+  background-color: #006;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+#nav{
+    float: left;
+    align-items: center;
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a {
+    text-transform: uppercase;
+  }
+
+#nav li a{
+  color: #fff;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 15px;
+}
+
+#nav > li:hover > a{
+    background-color: #fff;
+    color: #006;
+    display: block;
+}
+
+#nav li:hover a{
+    display: inline-block;
+}
+
+.container-search{
+margin-right: 10px;
+}
+
+.search{
+    float: right;
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search .search-input{
+    align-items: center;
+    line-height:46px;
+    display: inline-block;
+}
+
+.search .search-input input{
+    line-height: 30px;
+    width: 200px;
+    border-radius: 6px;
+}
+
+.search .search-button{
+    margin: 0 10px;
+    padding: 0 14px;
+    line-height:46px;
+    background-color: #006;
+    color: #fff;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.search > .search-button:hover{
+    background-color: #F00;
+    color: #fff;
+}
+.auth-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    
+    margin-right: 15px;
+}
+
+.auth-button button {
+    background-color: #006;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height:46px;
+    cursor: pointer;
+}
+
+.auth-button button:hover {
+    background-color: #F00;
+    color: #fff;
+}

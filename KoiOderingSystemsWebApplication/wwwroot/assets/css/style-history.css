@@ -1,0 +1,151 @@
+/* Reset and base styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Layout styling */
+#content {
+    width: 100%;
+    margin-top: 46px;
+    padding: 0 160px;
+    background-color: #E8FFED; /* Chủ đạo */
+    color: #006; /* Văn bản */
+    display: inline-block;
+}
+
+#order-history-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #006; /* Giữ màu chủ đạo */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    color: #444;
+    text-align: left;
+}
+
+thead {
+    background-color: #006;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Status badges */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background-color: #FFC107;
+    color: #fff;
+}
+
+.status.completed {
+    background-color: #27AE60;
+    color: #fff;
+}
+
+.status.cancelled {
+    background-color: #E74C3C;
+    color: #fff;
+}
+
+/* Action buttons */
+.action-buttons a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.action-buttons a.rate {
+    background-color: #3498DB;
+}
+
+.action-buttons a.rate:hover {
+    background-color: #2980B9;
+}
+
+.action-buttons a.details {
+    background-color: #006;
+}
+
+.action-buttons a.details:hover {
+    background-color: #004080;
+}
+
+/* Back to shopping button */
+.back-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-button a {
+    padding: 12px 25px;
+    background-color: #006;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #004080;
+}

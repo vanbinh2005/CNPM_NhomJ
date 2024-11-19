@@ -1,0 +1,131 @@
+/* Cài đặt chung */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E8FFED;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container chính */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Bảng thông tin */
+.table-container {
+    margin-bottom: 30px;
+}
+
+/* Cải tiến bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #6ec8bf;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Các tiêu đề cột */
+th {
+    background-color: #46639d;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Dòng dữ liệu trong bảng */
+td {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hiệu ứng hover cho các dòng bảng */
+tr:hover td {
+    background-color: #f1f8ff;
+}
+
+/* Cải tiến tiêu đề của mỗi bảng */
+.table-container h2 {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Cải thiện giao diện của bảng tổng kết */
+th[colspan="2"] {
+    background-color: #67d77d;
+    color: white;
+    text-align: right;
+}
+
+/* Các dòng trong bảng */
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+/* Tạo hiệu ứng cho các tiêu đề */
+th, td {
+    transition: all 0.3s ease;
+}
+
+/* Thêm khoảng cách cho các mục bên ngoài bảng */
+table {
+    margin-top: 20px;
+}
+
+/* Tạo kiểu cho các bảng tổng kết */
+table th, table td {
+    text-align: center;
+}
+
+/* Chỉnh sửa bảng khi có nhiều dữ liệu */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    table, th, td {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
+
+#back-button button{
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #006;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+#back-button button:hover {
+    background-color: #006;
+}

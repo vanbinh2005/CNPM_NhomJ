@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear:both;
+}
+#footer{
+    position: absolute;
+    padding-top: 100px;
+    background-color: #E8FFED;
+    width: 100%;
+}
+
+.container-footer{
+    padding: 10px;
+    background-color: #006;
+    color:#fff;
+    text-align: center;
+}
+
+.container-footer p{
+    padding: 5px 0;
+}
