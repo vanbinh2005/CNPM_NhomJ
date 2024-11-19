@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Khách Hàng</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="customer-profile">
+        <h1>Hồ Sơ Khách Hàng</h1>
+        
+        <!-- Hiển thị thông tin khách hàng -->
+        <div id="customer-details">
+            <h2>Thông Tin Cá Nhân</h2>
+            <p><strong>Họ và Tên:</strong> <span id="customer-name"></span></p>
+            <p><strong>Email:</strong> <span id="customer-email"></span></p>
+            <p><strong>Số Điện Thoại:</strong> <span id="customer-phone"></span></p>
+        </div>
+
+        <!-- Hiển thị lịch sử đơn hàng -->
+        <div id="order-history">
+            <h2>Lịch Sử Mua Hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Ngày Đặt</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Số Lượng</th>
+                        <th>Tổng Tiền</th>
+                        <th>Trạng Thái</th>
+                    </tr>
+                </thead>
+                <tbody id="order-history-list">
+                    <!-- Các mục đơn hàng sẽ được điền vào đây -->
+                </tbody>
+            </table>
+            <div id="no-orders-msg" style="display: none;">
+                Không có đơn hàng nào!
+            </div>
+        </div>
+        
+        <!-- Nút quay lại trang mua sắm -->
+        <div class="back-button">
+            <a href="index-categories.html">Quay lại Mua Sắm</a>
+        </div>
+    </div>
+
+    <!-- Liên kết tới file script -->
+    <script src="./assets/js/customer-profile.js"></script>
+</body>
+</html>

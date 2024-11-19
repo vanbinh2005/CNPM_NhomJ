@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matsuda Koi Farm</title>
+  <link rel="stylesheet" href="./assets/css/style-history.css">
+  <script src="/assets/js/include.js"></script>
+  <script src="/assets/js/script-cart.js"></script>
+  <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    
+  <div id="koi-farm">
+    <div data-include="index.html"></div>
+    <div id="content">
+        <div id="order-history-container">
+            <h1>Your Order History</h1>
+            
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Action</th> <!-- Added Action column for rating -->
+                  </tr>
+                </thead>
+                <tbody id="order-history-list">
+                  <!-- Order items will be dynamically populated here -->
+                </tbody>
+              </table>
+            </div>
+          
+            <div class="back-button">
+              <a href="index-categories.html">Back to Shopping</a>
+            </div>
+          
+            <div class="no-orders" id="no-orders-msg" style="display: none;">
+              No orders found!
+            </div>
+          </div>
+          
+    </div>
+    <div data-include="footer.html"></div>
+  </div>
+  
+  <!-- Modal for Rating -->
+  <div id="rating-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>Rate Your Product</h2>
+      <form id="rating-form">
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="productName" readonly>
+
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating">
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Good</option>
+              <option value="3">3 - Average</option>
+              <option value="2">2 - Poor</option>
+              <option value="1">1 - Very Bad</option>
+          </select>
+
+          <label for="feedback">Feedback:</label>
+          <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+          <button type="submit">Submit</button>
+          <button type="button" id="close-modal">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Hàm hiển thị lịch sử đơn hàng
+    function displayOrderHistory() {
+        const orders = JSON.parse(localStorage.getItem('orderHistory')) || [];
+        const orderHistoryList = document.getElementById('order-history-list');
+        orderHistoryList.innerHTML = ''; // Xóa nội dung cũ
+
+        if (orders.length === 0) {
+            document.getElementById('no-orders-msg').style.display = 'block';
+        } else {
+            document.getElementById('no-orders-msg').style.display = 'none';
+            orders.forEach(order => {
+                let orderItemsHTML = '';
+                order.products.forEach(item => {
+                    orderItemsHTML += `
+                        <tr>
+                            <td>${order.orderId}</td>
+                            <td>${order.date}</td>
+                            <td>${item.name}</td>
+                            <td>${item.quantity}</td>
+                            <td>${order.totalPrice}¥</td>
+                            <td>${order.status}</td>
+                            <td><button onclick="showRatingModal('${item.name}')">Rate</button></td> <!-- Added Rate button -->
+                        </tr>
+                    `;
+                });
+
+                orderHistoryList.innerHTML += orderItemsHTML;
+            });
+        }
+    }
+
+    // Hàm mở modal đánh giá
+    function showRatingModal(productName) {
+        const modal = document.getElementById('rating-modal');
+        const productNameInput = document.getElementById('product-name');
+        productNameInput.value = productName; // Gán tên sản phẩm vào modal
+        modal.style.display = 'flex'; // Hiển thị modal
+
+        // Đóng modal khi bấm nút "Cancel"
+        document.getElementById('close-modal').addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        // Gửi đánh giá
+        document.getElementById('rating-form').onsubmit = function (e) {
+            e.preventDefault(); // Ngăn form reload trang
+            saveRating(productName);
+            modal.style.display = 'none'; // Đóng modal sau khi gửi
+        };
+    }
+
+    // Lưu đánh giá vào localStorage
+    function saveRating(productName) {
+        const rating = document.getElementById('rating').value;
+        const feedback = document.getElementById('feedback').value;
+
+        // Lưu đánh giá vào localStorage
+        const ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        ratings.push({ productName, rating, feedback });
+        localStorage.setItem('ratings', JSON.stringify(ratings));
+
+        alert('Thank you for your feedback!');
+    }
+
+    // Gọi hàm khi trang được tải
+    document.addEventListener('DOMContentLoaded', displayOrderHistory);
+  </script>
+</body>
+
+</html>

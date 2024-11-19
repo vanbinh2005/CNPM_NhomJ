@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Profile</title>
+  <link rel="stylesheet" href="/assets/css/style-cusProfile.css">
+</head>
+<body>
+  <div id="content">
+      <div id="customer-profile">
+        <h1>Customer Profile</h1>
+        
+        <!-- Thông tin khách hàng -->
+        <div id="customer-info">
+          <h2>Customer Information</h2>
+          <table>
+            <tr>
+              <th>Name</th>
+              <td id="customer-name"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td id="customer-email"></td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td id="customer-phone"></td>
+            </tr>
+          </table>
+        </div>
+    
+        <!-- Lịch sử mua hàng -->
+        <div id="order-history">
+          <h2>Order History</h2>
+          <table id="order-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Products</th>
+                <th>Total Price</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Lịch sử mua hàng sẽ được thêm động tại đây -->
+            </tbody>
+          </table>
+          <div id="no-orders-msg" style="display: none;">No orders found!</div>
+        </div>
+      </div>
+      <div class="back-button">
+        <a href="index-categories.html">Back to Categories</a>
+      </div>
+      
+  </div>
+  <script>
+    // Kiểm tra quyền truy cập (chỉ Sales Staff)
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!loggedInUser || loggedInUser.role !== "employee-sale") {
+      alert("Access denied. Only Sales Staff can view this page.");
+      window.location.href = "index-home.html";
+    }
+
+    // Hiển thị thông tin khách hàng
+    function displayCustomerInfo() {
+      const customer = JSON.parse(localStorage.getItem("customerInfo"));
+      if (customer) {
+        document.getElementById("customer-name").textContent = customer.name || "N/A";
+        document.getElementById("customer-email").textContent = customer.email || "N/A";
+        document.getElementById("customer-phone").textContent = customer.phone || "N/A";
+      } else {
+        alert("No customer information available.");
+      }
+    }
+
+    // Hiển thị lịch sử mua hàng
+    function displayOrderHistory() {
+      const orders = JSON.parse(localStorage.getItem("orderHistory")) || [];
+      const orderTableBody = document.querySelector("#order-table tbody");
+
+      if (orders.length === 0) {
+        document.getElementById("no-orders-msg").style.display = "block";
+      } else {
+        orders.forEach(order => {
+          const orderRow = document.createElement("tr");
+          orderRow.innerHTML = `
+            <td>${order.orderId}</td>
+            <td>${order.date}</td>
+            <td>
+              <ul>
+                ${order.products.map(item => `<li>${item.name} x${item.quantity}</li>`).join('')}
+              </ul>
+            </td>
+            <td>${order.totalPrice}¥</td>
+            <td>${order.status}</td>
+          `;
+          orderTableBody.appendChild(orderRow);
+        });
+      }
+    }
+
+    // Gọi các hàm hiển thị khi trang được tải
+    document.addEventListener("DOMContentLoaded", () => {
+      displayCustomerInfo();
+      displayOrderHistory();
+    });
+  </script>
+  
+</body>
+</html>

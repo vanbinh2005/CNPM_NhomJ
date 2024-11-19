@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsuda Koi farm</title>
+    <link rel="stylesheet" href="/assets/css/style-login.css">
+</head>
+<body>
+
+    <div class="login-container" id="loginContainer">
+        <h2>LOG IN</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="User name" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+
+            <!-- Thêm lựa chọn chức vụ -->
+            <select id="loginRole" required>
+                <option value="">Role</option>
+                <option value="manager">Manager</option>
+                <option value="employee-sale">Sales Staff</option>
+                <option value="employee">Consulting Staff</option>
+                <option value="employee">Delivering Staff</option>
+                <option value="guest">Customer</option>
+            </select>
+
+            <button type="button" onclick="login()">Log in</button>
+            <div class="error" id="loginError"></div>
+        </form>
+        <div class="switch-mode" onclick="toggleForm()">New member? Register here</div>
+    </div>
+
+    <div class="register-container" id="registerContainer" style="display: none;">
+        <h2>REGISTER</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="text" id="registerPhone" placeholder="Phone Number" required>
+
+            <select id="registerRole" required onchange="toggleAdminPasswordField()">
+                <option value="">Role</option>
+                <option value="manager">Manager</option>
+                <option value="employee-sale">Sales Staff</option>
+                <option value="employee">Consulting Staff</option>
+                <option value="employee">Delivering Staff</option>
+                <option value="guest">Customer</option>
+            </select>
+
+            <!-- Admin Password Field (hidden by default) -->
+            <div id="adminPasswordField" style="display: none;">
+                <input type="password" id="adminPassword" placeholder="Admin Password (required for non-Customer roles)">
+            </div>
+
+
+            <button type="button" onclick="register()">Register</button>
+            <div class="error" id="registerError"></div>
+        </form>
+
+        <div class="switch-mode" onclick="toggleForm()">Already have an account? Log in here</div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const loginContainer = document.getElementById("loginContainer");
+            const registerContainer = document.getElementById("registerContainer");
+            if (loginContainer.style.display === "none") {
+                loginContainer.style.display = "block";
+                registerContainer.style.display = "none";
+            } else {
+                loginContainer.style.display = "none";
+                registerContainer.style.display = "block";
+            }
+        }
+
+        function login() {
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+            const role = document.getElementById("loginRole").value;
+            const errorElement = document.getElementById("loginError");
+
+            // Lấy danh sách người dùng từ localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Tìm người dùng
+            const user = users.find(
+                (u) => u.username === username && u.password === password && u.role === role
+            );
+
+            if (user) {
+                // Lưu thông tin đăng nhập
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+                // Chuyển hướng
+                if (user.role === "employee-sale") {
+                    window.location.href = "index-cusProfile.html"; // Nếu là Sales Staff
+                }
+                else if (user.role === "manager") {
+                    window.location.href = "index-management.html";
+                }
+
+                else {
+                    window.location.href = "index-home.html"; // Các role khác
+                }
+            } else {
+                errorElement.textContent = "Invalid username or password.";
+            }
+        }
+
+
+
+        function register() {
+            const username = document.getElementById("registerUsername").value;
+            const password = document.getElementById("registerPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const email = document.getElementById("registerEmail").value;
+            const phone = document.getElementById("registerPhone").value;
+            const role = document.getElementById("registerRole").value;
+            const adminPassword = document.getElementById("adminPassword").value;
+            const errorElement = document.getElementById("registerError");
+
+            const ADMIN_SECRET = "adminnhomj"; // Admin password (can be securely stored in environment variables on a server)
+
+            // Validate inputs
+            if (!username || !password || !confirmPassword || !email || !phone || !role) {
+                errorElement.textContent = "Please fill out all fields.";
+            } else if (password !== confirmPassword) {
+                errorElement.textContent = "Passwords do not match.";
+            } else if (role !== "guest" && adminPassword !== ADMIN_SECRET) {
+                errorElement.textContent = "Invalid Admin Password for non-Customer roles.";
+            } else {
+                // Lưu thông tin đăng ký vào localStorage
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const isUserExists = users.some((u) => u.username === username);
+
+                if (isUserExists) {
+                    errorElement.textContent = "Username is already taken. Please choose a different one.";
+                } else {
+                    const newUser = { username, password, email, phone, role };
+                    users.push(newUser);
+                    localStorage.setItem('users', JSON.stringify(users));
+
+                    alert("Registration successful!");
+                    toggleForm(); // Quay về form đăng nhập
+                }
+            }
+        }
+        function toggleAdminPasswordField() {
+            const role = document.getElementById("registerRole").value;
+            const adminPasswordField = document.getElementById("adminPasswordField");
+
+            // Hiển thị trường mật khẩu nếu vai trò không phải "guest"
+            if (role !== "guest" && role !== "") {
+                adminPasswordField.style.display = "block";
+            } else {
+                adminPasswordField.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/form-buy.css">
+    <script src="/assets/js/include.js"></script>
+    <title>Matsuda Koi farm</title>
+</head>
+<body>
+  <h1>Trip Lookup</h1>
+
+  <form id="searchForm">
+    <label for="departure_city">Departure Point:</label>
+        <select name="japan-prefectures" >
+        <option value="">Please Select</option>
+        <option value="hokkaido">Hokkaido</option>
+        <option value="aomori">Aomori</option>
+        <option value="yamagata">Yamagata</option>
+        <option value="fukushima">Fukushima</option>
+        <option value="ibaraki">Ibaraki</option>
+        <option value="tochigi">Tochigi</option>
+        <option value="gunma">Gunma</option>
+        <option value="saitama">Saitama</option>
+        <option value="chiba">Chiba</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="kanagawa">Kanagawa</option>
+        <option value="niigata">Niigata</option>
+        <option value="toyama">Toyama</option>
+        <option value="ishikawa">Ishikawa</option>
+        <option value="fukui">Fukui</option>
+        <option value="yamanashi">Yamanashi</option>
+        <option value="nagano">Nagano</option>
+        <option value="gifu">Gifu</option>
+        <option value="shizuoka">Shizuoka</option>
+        <option value="aichi">Aichi</option>
+        <option value="mie">Mie</option>
+        <option value="shiga">Shiga</option>
+        <option value="kyoto">Kyoto</option>
+        <option value="osaka">Osaka</option>
+        <option value="hyogo">Hyogo</option>
+        <option value="nara">Nara</option>
+        <option value="wakayama">Wakayama</option>
+        <option value="tottori">Tottori</option>
+        <option value="shimane">Shimane</option>
+        <option value="okayama">Okayama</option>
+        <option value="hiroshima">Hiroshima</option>
+        <option value="yamaguchi">Yamaguchi</option>
+        <option value="tokushima">Tokushima</option>
+        <option value="kagawa">Kagawa</option>
+        <option value="ehime">Ehime</option>
+        <option value="kochi">Kochi</option>
+        <option value="fukuoka">Fukuoka</option>
+        <option value="saga">Saga</option>
+        <option value="nagasaki">Nagasaki</option>
+        <option value="kumamoto">Kumamoto</option>
+        <option value="oeita">Oita</option>
+        <option value="miyazaki">Miyazaki</option>
+        <option value="kagoshima">Kagoshima</option>
+        <option value="okinawa">Okinawa</option>
+    </select>
+    <input type="text" id="departure_city" name="departure_city" placeholder="specific departure point">
+    <label for="destination_city">Destinations:</label>
+        <select name="japan-prefectures" >
+            <option value="">Please Select</option>
+            <option value="hokkaido">Hokkaido</option>
+            <option value="aomori">Aomori</option>
+            <option value="yamagata">Yamagata</option>
+            <option value="fukushima">Fukushima</option>
+            <option value="ibaraki">Ibaraki</option>
+            <option value="tochigi">Tochigi</option>
+            <option value="gunma">Gunma</option>
+            <option value="saitama">Saitama</option>
+            <option value="chiba">Chiba</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="kanagawa">Kanagawa</option>
+            <option value="niigata">Niigata</option>
+            <option value="toyama">Toyama</option>
+            <option value="ishikawa">Ishikawa</option>
+            <option value="fukui">Fukui</option>
+            <option value="yamanashi">Yamanashi</option>
+            <option value="nagano">Nagano</option>
+            <option value="gifu">Gifu</option>
+            <option value="shizuoka">Shizuoka</option>
+            <option value="aichi">Aichi</option>
+            <option value="mie">Mie</option>
+            <option value="shiga">Shiga</option>
+            <option value="kyoto">Kyoto</option>
+            <option value="osaka">Osaka</option>
+            <option value="hyogo">Hyogo</option>
+            <option value="nara">Nara</option>
+            <option value="wakayama">Wakayama</option>
+            <option value="tottori">Tottori</option>
+            <option value="shimane">Shimane</option>
+            <option value="okayama">Okayama</option>
+            <option value="hiroshima">Hiroshima</option>
+            <option value="yamaguchi">Yamaguchi</option>
+            <option value="tokushima">Tokushima</option>
+            <option value="kagawa">Kagawa</option>
+            <option value="ehime">Ehime</option>
+            <option value="kochi">Kochi</option>
+            <option value="fukuoka">Fukuoka</option>
+            <option value="saga">Saga</option>
+            <option value="nagasaki">Nagasaki</option>
+            <option value="kumamoto">Kumamoto</option>
+            <option value="oeita">Oita</option>
+            <option value="miyazaki">Miyazaki</option>
+            <option value="kagoshima">Kagoshima</option>
+            <option value="okinawa">Okinawa</option>
+        </select>
+    
+    <input type="text" id="destination_city" name="destination_city" placeholder="specific destinations">
+    <label for="departure_date">Departure Date:</label>
+    <input type="date" id="departure_date" name="departure_date">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('searchForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+  
+      const departure_city = document.querySelector('input[name="departure_city"]').value;
+      const destination_city = document.querySelector('input[name="destination_city"]').value;
+      const departure_date = document.getElementById('departure_date').value;
+  
+      const response = await fetch(`/trips?departure_city=${departure_city}&destination_city=${destination_city}&departure_date=${departure_date}`);
+      const trips = await response.json();
+  
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<h2>Search results:</h2>';
+  
+      if (trips.length > 0) {
+        trips.forEach(trip => {
+          resultDiv.innerHTML += `
+            <div>
+              <p><strong>Departure Point:</strong> ${trip.departure_city}</p>
+              <p><strong>Destinations:</strong> ${trip.destination_city}</p>
+              <p><strong>Departure Date:</strong> ${trip.departure_date}</p>
+              <p><strong>Price:</strong> ${trip.price} VND</p>
+            </div>
+            <hr>
+          `;
+        });
+      } else {
+        resultDiv.innerHTML += `<p>No suitable trips were found.</p>`;
+      }
+    });
+  </script>  
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsuda Koi Farm</title>
+    <link rel="stylesheet" href="./assets/css/style-cart.css">
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/script-cart.js"></script>
+    <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+
+<body>
+    <div id="koi-farm">
+        <div data-include="index.html"></div>
+        <div id="slider"></div>
+        <div id="content">
+
+            <h1>Cart</h1>
+            <div id="cart-items"></div>
+            <button class="back-button" onclick="goBack()">Back to the fish buying page</button>
+
+            <script src="script-cart.js"></script>
+            <script>
+                displayCartItems();
+            </script>
+            <div id="cart-summary">
+                <p><strong>Total price:</strong> <span id="total-price">0</span> ¥</p>
+                <p><strong>Shipping fee:</strong> <span id="shipping-fee">0</span> ¥</p>
+                <p><strong>Grand total:</strong> <span id="grand-total">0</span> ¥</p>
+            </div>
+            <div id="checkout-button">
+                <button onclick="goToCheckout()">PAY</button>
+            </div>
+
+            <!-- Phần lưu ý -->
+            <div id="cart-notes">
+                <p>* The shipping fee will be added after the shipping address of the product is decided.</p>
+                <p>* Due to the system, no matter how many animals you order, the shipping fee will be for one box, so the actual price may differ. If you are making a transfer, please do not transfer until you receive an email from the person in charge of our koi farm.</p>
+                <p>* If the number of orders exceeds the number of stocks, it will automatically become the maximum number of stocks.</p>
+                <p>* This shopping cart can only be used by customers whose delivery address is in Japan. For overseas shipments, please contact us by e-mail.</p>
+            </div>
+        </div>
+        <div data-include="footer.html"></div>
+    </div>
+</body>
+
+</html>
